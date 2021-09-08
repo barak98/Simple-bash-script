@@ -1,4 +1,14 @@
-PASS=$@ 
+OPTION=$1
+PASS="."
+if [ $OPTION == "-f" ]
+then  
+  PASS=`cat $2` && echo "file"
+else
+  PASS="$1" && echo "text"
+fi
+
+
+
 ISPASSOK=0 #i set at the start that the pass is ok
            #but if the script finds an error it will change it to false
            #and print all the things that are not ok
