@@ -14,6 +14,8 @@ fi
 ISPASSOK=0 #i set at the start that the pass is ok
            #but if the script finds an error it will change it to false
            #and print all the things that are not ok
+RED='\033[0;31m'
+GREEN='\033[0;32m'
 
 #checks lenght of password
 if [ ${#PASS} -lt 10 ] ;
@@ -35,6 +37,7 @@ fi
 if ! [[  "$PASS" =~ [[:digit:]] ]]; then
   echo "digit character not found" && ISPASSOK=1
 fi
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
