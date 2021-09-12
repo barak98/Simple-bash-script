@@ -2,6 +2,7 @@ OPTION=$1
 PASS="."
 if [ $OPTION == "-f" ]
 then  
+  #Checks if file exist if not exit script
   if ! [ -f $2 ]
     then
      echo "File dosent exist" && exit 1;
@@ -23,17 +24,17 @@ then
     echo "Password Must be at least 10 characters long" && ISPASSOK=1
 fi
 
-#checks if ther is no an uppercase
+#checks if ther is no uppercase charcter
 if ! [[  "$PASS" =~ [[:upper:]] ]]; then
   echo "uppercase character not found" && ISPASSOK=1
 fi
 
-#checks if ther is not a lowercase  
+#checks if ther is no lowercase charcter 
 if ! [[  "$PASS" =~ [[:lower:]] ]]; then
   echo "lowercase character not found" && ISPASSOK=1
 fi
 
-# chexkes if there is no digit
+# checks if there is no digit
 if ! [[  "$PASS" =~ [[:digit:]] ]]; then
   echo "digit character not found" && ISPASSOK=1
 fi
