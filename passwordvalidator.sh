@@ -10,17 +10,17 @@ then
     echo "Password Must be at least 10 characters long" && ISPASSOK=1
 fi
 
-#checks if ther is no an uppercase
+#checks if there is no an uppercase
 if ! [[  "$PASS" =~ [[:upper:]] ]]; then
   echo "uppercase character not found" && ISPASSOK=1
 fi
 
-#checks if ther is not a lowercase  
+#checks if there is not a lowercase  
 if ! [[  "$PASS" =~ [[:lower:]] ]]; then
   echo "lowercase character not found" && ISPASSOK=1
 fi
 
-# chexkes if there is no digit
+# checks if there is no digit
 if ! [[  "$PASS" =~ [[:digit:]] ]]; then
   echo "digit character not found" && ISPASSOK=1
 fi
