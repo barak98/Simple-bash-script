@@ -2,8 +2,7 @@ PASS=$@
 ISPASSOK=0 #i set at the start that the pass is ok
            #but if the script finds an error it will change it to false
            #and print all the things that are not ok
-RED='\033[0;31m'
-GREEN='\033[0;32m'
+
 
 #checks lenght of password
 if [ ${#PASS} -lt 10 ] ;
